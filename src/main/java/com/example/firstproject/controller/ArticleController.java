@@ -39,7 +39,7 @@ public class ArticleController {
         Article saved = articleRepository.save(article);
         log.info(saved.toString());
         //System.out.println(saved.toString()); article이 잘 저장됐는지 확인
-        return "";
+        return "redirect:/articles/" + saved.getId();
     }
 
     @GetMapping("articles/{id}")
